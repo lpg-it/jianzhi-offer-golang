@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func quickSort(nums []int) []int {
-	return _quickSort(nums, 0, len(nums)-1)
+func quickSort(nums []int)[]int{
+	return _quickSort(nums, 0, len(nums) - 1)
 }
 
 func _quickSort(nums []int, left, right int) []int {
@@ -24,12 +24,20 @@ func partition(nums []int, left, right int) int {
 			index++
 		}
 	}
-	nums[pivot], nums[index-1] = nums[index-1], nums[pivot]
+	nums[pivot], nums[index - 1] = nums[index - 1], nums[pivot]
 	return index - 1
 }
 
-func main() {
-	nums := []int{3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48}
+func main(){
+	var n int
+	fmt.Scan(&n)
+
+	nums := make([]int, n)
+	for i := 0; i < n; i++ {
+		var tmp int
+		fmt.Scan(&tmp)
+		nums[i] = tmp
+	}
 	res := quickSort(nums)
 	fmt.Println(res)
 }
