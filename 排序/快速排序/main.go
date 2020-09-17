@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 快速排序
 func quickSort(nums []int)[]int{
 	return _quickSort(nums, 0, len(nums) - 1)
 }
@@ -38,6 +39,9 @@ func main(){
 		fmt.Scan(&tmp)
 		nums[i] = tmp
 	}
+
 	res := quickSort(nums)
-	fmt.Println(res)
+	for _, num := range res {
+		fmt.Print(num, " ")
+	}
 }

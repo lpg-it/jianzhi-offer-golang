@@ -49,5 +49,4 @@ func main() {
 	n := 3
 	res := generateParenthesis(n)
 	fmt.Println(res)
-
 }
